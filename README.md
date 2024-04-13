@@ -13,8 +13,29 @@ We employ the BERT (Bidirectional Encoder Representations from Transformers) mod
 ## Data
 The primary dataset used in this project is the Isarcasm dataset (Oprea and Magdy, 2019), which is designed specifically for sarcasm detection. We augment this with the Sarcasm Headlines Dataset (Misra and Arora, 2019) and the Sentiment140 dataset (Go et al., 2009) to enrich the training data and address the scarcity of sarcastic examples in existing collections. Train_Dataset.csv is the concatation of main task dataset and mutant100 which we find it the best dataset for the models. Test_Dataset.csv is the task test dataset with labels.
 
-## Data Augmentation
-We enhance our dataset using generative models to increase the diversity and volume of training data. Specifically, we utilize GPT-2, a model known for its robust text generation capabilities. GPT-2 helps in creating varied sarcastic expressions, which are crucial for training our models to recognize sarcasm effectively. This directory contains scripts and models related to our data augmentation process using GPT-2.
+## Data Augmentation Using GPT-2
+###
+We enhance our dataset using generative models to increase the diversity and volume of training data. This section outlines the use of Generative Pre-trained Transformer 2 (GPT-2) to augment our dataset with synthetic sarcastic expressions. The aim is to enhance the diversity and volume of our training set, thereby improving the accuracy and robustness of our sarcasm detection models.
+
+### Process Overview
+
+#### 1. **Model Selection**
+- **Model**: GPT-2 Medium
+- **Justification**: Selected for its advanced linguistic capabilities and balance between performance and computational demands, making it ideal for generating nuanced sarcastic sentences.
+
+#### 2. **Training and Fine-Tuning**
+- **Source Material**: The model was fine-tuned on a diverse corpus collected from sources known for their rich sarcastic content, including social media and literary texts.
+- **Objective**: To adapt GPT-2's generative capabilities to better reflect the stylistic and contextual nuances of sarcastic language.
+
+#### 3. **Data Generation**
+- **Initialization**: Generation processes are started with common sarcastic seed phrases to guide the output.
+- **Control Measures**: Mechanisms are in place to ensure the generated text adheres to logical and stylistic consistency with existing data.
+- **Post-Processing**: All generated text undergoes a stringent quality check to remove any repetitive, irrelevant, or low-quality outputs.
+
+#### 4. **Integration with Existing Data**
+- **Method**: Synthetic sentences are carefully integrated with the original dataset, maintaining balanced proportions to prevent biases.
+- **Stratification**: Careful blending is performed to ensure that the presence of augmented data complements rather than overwhelms the original dataset.
+
 
 ## Experimental Setup
 
