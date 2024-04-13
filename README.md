@@ -10,11 +10,8 @@ Sarcasm detection remains a challenging area in natural language processing due 
 ### BERT
 We employ the BERT (Bidirectional Encoder Representations from Transformers) model extensively in our experiments. BERT's ability to process words in relation to all other words in a sentence (rather than sequentially) allows it to capture the contextual nuances essential for accurate sarcasm detection.
 
-### RoBERTa
-In addition to BERT, we utilize RoBERTa, which modifies key hyperparameters in BERT, including removing the next-sentence pretraining objective and training with much larger mini-batches and learning rates.
-
 ## Data
-The primary dataset used in this project is the Isarcasm dataset (Oprea and Magdy, 2019), which is designed specifically for sarcasm detection. We augment this with the Sarcasm Headlines Dataset (Misra and Arora, 2019) and the Sentiment140 dataset (Go et al., 2009) to enrich the training data and address the scarcity of sarcastic examples in existing collections.
+The primary dataset used in this project is the Isarcasm dataset (Oprea and Magdy, 2019), which is designed specifically for sarcasm detection. We augment this with the Sarcasm Headlines Dataset (Misra and Arora, 2019) and the Sentiment140 dataset (Go et al., 2009) to enrich the training data and address the scarcity of sarcastic examples in existing collections. Train_Dataset.csv is the concatation of main task dataset and mutant100 which we find it the best dataset for the models. Test_Dataset.csv is the task test dataset with labels.
 
 ## Data Augmentation
 We enhance our dataset using generative models to increase the diversity and volume of training data. Specifically, we utilize GPT-2, a model known for its robust text generation capabilities. GPT-2 helps in creating varied sarcastic expressions, which are crucial for training our models to recognize sarcasm effectively. This directory contains scripts and models related to our data augmentation process using GPT-2.
