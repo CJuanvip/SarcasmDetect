@@ -11,7 +11,23 @@ Sarcasm detection remains a challenging area in natural language processing due 
 We employ the BERT (Bidirectional Encoder Representations from Transformers) model extensively in our experiments. BERT's ability to process words in relation to all other words in a sentence (rather than sequentially) allows it to capture the contextual nuances essential for accurate sarcasm detection.
 
 ## Data
-The primary dataset used in this project is the Isarcasm dataset (Oprea and Magdy, 2019), which is designed specifically for sarcasm detection. We augment this with the Sarcasm Headlines Dataset (Misra and Arora, 2019) and the Sentiment140 dataset (Go et al., 2009) to enrich the training data and address the scarcity of sarcastic examples in existing collections. Train_Dataset.csv is the concatation of main task dataset and mutant100 which we find it the best dataset for the models. Test_Dataset.csv is the task test dataset with labels.
+The primary dataset used in this project is the Isarcasm dataset (Oprea and Magdy, 2019), which is designed specifically for sarcasm detection.
+
+### Data Cleaning
+Cleaning text data is crucial to remove noise and reduce the dimensionality of the dataset, which can enhance the performance of models.
+
+1. **Lowercasing**: Convert all characters in the text to lowercase to maintain uniformity.
+2. **Removing User Tags**: Eliminate any user mentions in the text, typically found in tweets or other social media posts.
+3. **Removing Hashtags**: Strip out words prefixed with '#' which are commonly used in social media.
+4. **Removing URLs**: Get rid of any web links as they are not useful for text analysis.
+5. **Removing Punctuations**: Delete characters that are marks of punctuation since they don't contribute to word meanings.
+6. **Removing Non-Alphabetic Characters**: Exclude any numbers and special characters from the text.
+7. **Removing Extra Spaces**: Reduce multiple spaces to a single space and remove leading and trailing spaces to clean up the text formatting.
+8. **Stemming**: Reduce words to their root form, simplifying variations of the same word (e.g., "running" to "run").
+9. **Lemmatization**: Convert words into their base form according to their part of speech, improving the contextual accuracy of text data.
+10. **Removing Stopwords**: Filter out commonly used words (such as “the”, “a”, “an”, “in”) that do not add significant meaning to the text.
+11. **De-emojifying**: Remove emojis from text as they can introduce ambiguity in text analysis and are not handled uniformly by text processing models.
+
 
 ## Data Augmentation Using GPT-2
 ###
