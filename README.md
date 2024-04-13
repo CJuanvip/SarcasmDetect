@@ -28,7 +28,7 @@ We explore a variety of preprocessing strategies to optimize model performance. 
 Models are fine-tuned on the augmented dataset using a cross-entropy loss function, optimized with Adam optimizer. Training configurations are meticulously documented to ensure reproducibility.
 
 ## Results
-Initial experiments with RoBERTa without preprocessing achieved an F1-sarcastic score of 0.38. After refinements, including targeted data augmentation and preprocessing, the score improved to 0.414.
+
 
 ## Discussion
 The results underscore the effectiveness of RoBERTa over BERT in sarcasm detection when trained under optimized conditions. Our findings suggest that tailored pre-training and larger mini-batches contribute significantly to performance improvements in detecting sarcasm.
@@ -51,10 +51,5 @@ This project highlights the potential of transformer-based models in understandi
 3. Explore the Jupyter notebooks for a hands-on look at the data and model outputs.
 4. Train the models using the scripts provided in the `/models` directory.
 
-## References
-
-- Oprea, S., & Magdy, W. (2019). Isarcasm: A dataset of sarcasm.
-- Misra, R., & Arora, P. (2019). Sarcasm Headlines Dataset.
-- Go, A., et al. (2009). Sentiment140 dataset.
 
 Feel free to contribute to this repository by suggesting improvements or by extending the range of experiments to cover more aspects of sarcasm detection.
