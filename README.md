@@ -1,7 +1,7 @@
 # Advanced Sarcasm Detection with Transformer Models
 
 ## Abstract
-This repository is an extension of ongoing research into the detection of sarcasm using transformer-based models. This project explores the application of advanced deep learning techniques to enhance sarcasm detection across diverse textual datasets. Utilizing state-of-the-art models like BERT and RoBERTa, this study aims to refine the understanding and prediction of sarcasm, addressing the challenge posed by its subtle and context-dependent nature.
+This repository is an extension of ongoing research into the detection of sarcasm using transformer-based models. This project explores the application of advanced deep learning techniques to enhance sarcasm detection across diverse textual datasets. Utilizing state-of-the-art models like BERT, this study aims to refine the understanding and prediction of sarcasm, addressing the challenge posed by its subtle and context-dependent nature.
 
 ## Motivation
 Sarcasm detection remains a challenging area in natural language processing due to its reliance on contextual cues and cultural nuances. Effective detection can significantly improve the interaction between humans and AI, particularly in fields like sentiment analysis and automated response systems.
